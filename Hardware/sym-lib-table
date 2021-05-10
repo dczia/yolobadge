@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name "saintcon-minibadge")(type "Legacy")(uri "${KIPRJMOD}/lib_sch/saintcon-minibadge.lib")(options "")(descr ""))
+  (lib (name "TPS73233DBVT")(type "Legacy")(uri "${KIPRJMOD}/lib_sch/TPS73233DBVT.lib")(options "")(descr ""))
+  (lib (name "badgelife_shitty_addon_v169bis")(type "Legacy")(uri "${KIPRJMOD}/lib_sch/badgelife_shitty_addon_v169bis.lib")(options "")(descr ""))
+  (lib (name "programmer-rescue")(type "Legacy")(uri "${KIPRJMOD}/programmer-rescue.lib")(options "")(descr ""))
+)

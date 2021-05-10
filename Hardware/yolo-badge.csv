@@ -1,0 +1,27 @@
+Source:,C:\Users\hamster\Documents\Development\dczia\Ziacon2\yolo-badge.kicad_sch,,,,,,,,,,,
+Date:,4/16/2021 23:26,,,,,,,,,,,
+Tool:,Eeschema (5.99.0-10336-g9846076676),,,,,,,,,,,
+Generator:,C:\Program Files\KiCad\5.99\bin\scripting\plugins/bom_csv_grouped_by_value_with_fp.py,,,,,,,,,,,
+Component Count:,32,,,,,,,,,,,50
+Ref,Qnty,Value,Cmp name,Footprint,Description,Vendor,Part Number,Vendor Number,Price 100,Qty,Total Price,Needed
+"C1, ",1,10uF,C,Capacitor_SMD:C_0603_1608Metric,Unpolarized capacitor,,,587-6012-2-ND,0.045,1,0.045,50
+"C2, C3, ",2,0.1uF,C,Capacitor_SMD:C_0603_1608Metric,Unpolarized capacitor,,,478-06036C104KAT4ATR-ND,0.0169,2,0.0338,100
+"C4, ",1,1uF,C,Capacitor_SMD:C_0603_1608Metric,Unpolarized capacitor,,,1276-1036-2-ND,0.0145,1,0.0145,50
+"C5, C6, ",2,12pF,C,Capacitor_SMD:C_0603_1608Metric,Unpolarized capacitor,,,1292-1480-2-ND,0.0124,2,0.0248,100
+"D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, ",10,WS2812B,WS2812B,LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm,RGB LED with integrated controller,,,,0.25,10,2.5,500
+"D11, ",1,Status,LED,LED_SMD:LED_0603_1608Metric,Light emitting diode,,,160-1183-1-ND,0.0611,1,0.0611,50
+"J1, ",1,SPI,Conn_02x03_Odd_Even,Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical,"Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",,,,,,0,0
+"J2, ",1,USB_B_Micro,USB_B_Micro-Connector_Specialized,Connector_USB:USB_Micro-B_Molex_47346-0001,,,,WM17141TR-ND,0.6564,1,0.6564,50
+"JP3, ",1,Bootloader,SolderJumper_2_Open,Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm,"Solder Jumper, 2-pole, open",,,,,,0,0
+"R3, R4, ",2,22R,R,Resistor_SMD:R_0603_1608Metric,Resistor,,,RMCF0603JT22R0CT-ND,0.0061,2,0.0122,100
+"R5, R7, ",2,10k,R,Resistor_SMD:R_0603_1608Metric,Resistor,,,RMCF0603JT10K0CT-ND,0.0061,2,0.0122,100
+"R6, ",1,330R,R,Resistor_SMD:R_0603_1608Metric,Resistor,,,RMCF0603JT330RCT-ND,0.0061,1,0.0061,50
+"RX1, ",1,Test_Point,Test_Point-Connector_Specialized,TestPoint:TestPoint_Pad_2.0x2.0mm,,,,,,,0,0
+"SW1, ",1,SW_Push,SW_Push,lip_fp:Wurth_434331013822,"Push button switch, generic, two pins",,,732-10144-2-ND,0.4945,1,0.4945,50
+"TX1, ",1,Test_Point,Test_Point-Connector_Specialized,TestPoint:TestPoint_Pad_2.0x2.0mm,,,,,,,0,0
+"U1, ",1,TPS73233DBVT,TPS73233DBVT,Package_TO_SOT_SMD:SOT-23-5,,,,296-15812-2-ND,1.1695,1,1.1695,50
+"U2, ",1,ATmega32U4-AU,ATmega32U4-AU-MCU_Microchip_ATmega,Package_QFP:TQFP-44_10x10mm_P0.8mm,,Digikey,ATMEGA32U4RC-AUR,ATMEGA32U4RC-AURTR-ND,4.334,1,4.334,50
+"X1, ",1,Badgelife_sao_connector_v169bis,Badgelife_sao_connector_v169bis,lip_fp:Badgelife-Shitty-v1.69bis,,,,,,,0,0
+"Y1, ",1,16Mhz,Crystal,Crystal:Crystal_SMD_HC49-SD,Two pin crystal,,,535-14879-2-ND,0.2323,1,0.2323,50
+,,,,,,,,,,,,
+Totals,,,,,,,,,,,9.5964,
