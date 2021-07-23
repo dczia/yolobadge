@@ -3,9 +3,9 @@ Ziacon 2 / DefCon 29 #yolobadge 2021
 
 A badge thought up, designed, and made in ~4 hours duing a live talk at ZiaCon 2, April 2021
 
-Badge layout by @hamster
-Design input from @jediguybob @lithochasm and @DCZia
-Art from @LunaSylumDancer and Challenge from @Syntax
+Badge layout by @hamster  
+Design input from @jediguybob @lithochasm and @DCZia  
+Art from @LunaSylumDancer and Challenge from @Syntax  
 
 ```
              _       _               _            
