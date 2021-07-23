@@ -19,7 +19,6 @@ CRGB leds[NUM_LEDS];
 
 int FastLED_fade_counter = 0;
 bool startup_done = false;
-uint8_t gHue = 120;
 
 
 void setup() {
@@ -32,21 +31,39 @@ void setup() {
 
 }
 
+// List of patterns to cycle through.  Each is defined as a separate function below.
+typedef void (*SimplePatternList[])();
+SimplePatternList gPatterns = { main_viz, viz2, viz3 };
+
+uint8_t gCurrentPatternNumber = 0; // Index number of which pattern is current
+uint8_t gHue = 0;
+
 void loop() {
 
-  //EVERY_N_MILLISECONDS( 20 ) { gHue++; }
+  EVERY_N_MILLISECONDS( 20 ) { gHue++; } // slowly cycle the "base color" through the rainbow
+  EVERY_N_SECONDS( 10 ) { nextPattern(); } // change patterns periodically
   
   if (startup_done == false) {
     startup_animation();
   }
   else {
-    main_viz();
+// Call the current pattern function once, updating the 'leds' array
+  gPatterns[gCurrentPatternNumber]();
+
   }
 
   FastLED.show();
     // insert a delay to keep the framerate modest
   FastLED.delay(1000/FRAMES_PER_SECOND); 
 
+}
+
+#define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
+
+void nextPattern()
+{
+  // add one to the current pattern number, and wrap around at the end
+  gCurrentPatternNumber = (gCurrentPatternNumber + 1) % ARRAY_SIZE( gPatterns);
 }
 
 void startup_animation() {
@@ -70,8 +87,24 @@ Serial.println("In Startup");
 
 void main_viz() {
   
-//Serial.println("GHue = " + gHue);
-  fill_rainbow( leds, NUM_LEDS, gHue, 3);
-   EVERY_N_MILLISECONDS( 22 ) { if (gHue < 255) {gHue++;} else { gHue = 0; } }
-  
+  //Serial.println("GHue = " + gHue);
+  //fill_rainbow( leds, NUM_LEDS, gHue, 3);
+  fill_rainbow( leds, NUM_LEDS, HUE_RED, 5);
+  fill_rainbow( leds, NUM_LEDS, HUE_ORANGE, 3);
+  fill_rainbow( leds, NUM_LEDS, HUE_RED, 5);
+
+}
+
+void viz2() {
+  fadeToBlackBy( leds, NUM_LEDS, 20);
+  byte dothue = 0;
+  for( int i = 0; i < 8; i++) {
+    leds[beatsin16( i+7, 0, NUM_LEDS-1 )] |= CHSV(dothue, 200, 255);
+    dothue += 32;
+  }
+}
+
+
+void viz3() {
+
 }
